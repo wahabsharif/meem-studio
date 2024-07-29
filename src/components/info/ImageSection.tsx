@@ -1,13 +1,13 @@
-import Image from "next/image";
-import React from "react";
 import infoImage from "@/assets/info-image.webp";
+import BlurFade from "@/components/magicui/blur-fade";
+import Image from "next/image";
 
 function ImageSection() {
   return (
     <section className="w-full h-full">
-      <div className="w-full h-full relative">
+      <BlurFade delay={1} inView>
         <Image src={infoImage} alt="Infographic" objectFit="cover" />
-      </div>
+      </BlurFade>
     </section>
   );
 }
