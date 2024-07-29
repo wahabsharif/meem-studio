@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/common/theme-provider";
 import Footer from "@/components/common/Footer";
+import GoogleMap from "@/components/common/GoogleMap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           >
             <main>
               {children}
+              <GoogleMap />
               <Footer />
             </main>
           </ThemeProvider>
