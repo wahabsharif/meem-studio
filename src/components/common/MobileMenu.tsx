@@ -15,7 +15,7 @@ const MobileMenu = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className="block md:hidden  shadow-md bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200">
+    <div className="block md:hidden shadow-md bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 sticky top-0 z-50">
       <div className="flex items-center justify-between p-4">
         <div className="flex-shrink-0">
           <Image src={Logo} alt="Logo" width={32} height={32} />
@@ -29,11 +29,11 @@ const MobileMenu = () => {
             {isOpen ? <GiTireIronCross size={24} /> : <FaBars size={24} />}
           </button>
           <nav
-            className={`absolute top-full right-16 w-full mt-8 ${
+            className={`absolute top-full  right-16 w-full mt-8 ${
               isOpen ? "block" : "hidden"
             } px-4`} // Added px-4 for right margin
           >
-            <ul className="p-4 bg-base-100 rounded-xl z-[10000] w-32 shadow">
+            <ul className="p-4 bg-base-100 rounded-xl z-[10000] w-32 bg-white dark:bg-slate-800 shadow-md bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 dark:shadow-md dark:bg-opacity-80 dark:backdrop-blur-2xl dark:backdrop-saturate-200">
               {navBarLinks.map((link) => (
                 <li key={link.href} className="mb-2">
                   <Link

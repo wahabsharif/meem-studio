@@ -79,11 +79,11 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="border-t border-gray-700 mt-6 pt-4 text-center">
-        <div className="flex justify-center items-center space-x-4 text-sm">
+        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 text-sm">
           <p>
             &copy; {new Date().getFullYear()} Meem Studio. All rights reserved.
           </p>
-          <span>|</span>
+          <span className="hidden sm:inline">|</span>
           <p className="text-sm flex items-center space-x-2">
             <span>Designed and developed by</span>
             <Link
